@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #efefef;
+}
+
+.my-page {
+    display: grid;
+}
+
+nav {
+    background-color: #43281c;
+    color: #fbf2c0;
+}
+
+.header {
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Open Sans";
+    padding: 20px;
+}

@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom right, pink, lightblue);
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-container {
+    display: flex;
+    flex-direction: column;
+    /*border: red solid 1px;*/
+    align-items: center;
+}
+
+.secondary-container {
+    background: white;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
