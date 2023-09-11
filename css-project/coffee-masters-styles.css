@@ -75,12 +75,26 @@ body {
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
   font-family: "Open Sans", sans-serif;
   padding: 15px;
+  list-style: none;
 
   & h2 {
     text-align: left;
     color: #885a2d;
     font-weight: lighter;
-    border-bottom: #43281c 1px solid;
     font-size: 16px;
   }
+}
+
+.items {
+  list-style: none;
+}
+.item {
+  border-bottom: 2px solid #ddb892;
+  display: grid;
+  padding: 10px 0;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas:
+    "quantity title price"
+    "quantity options price";
+  row-gap: 8px;
 }
