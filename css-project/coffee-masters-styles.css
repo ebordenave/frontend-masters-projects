@@ -83,10 +83,11 @@ body {
 
 .items {
   list-style: none;
+  text-align: left;
 }
 
 .item {
-  border-bottom: 2px solid #ddb892;
+  /*border-bottom: 2px solid #ddb892;*/
   display: grid;
   padding: 10px 0;
   grid-template-columns: 1fr 8fr 1fr;
@@ -94,4 +95,27 @@ body {
     "quantity title price"
     "quantity options price";
   row-gap: 8px;
+
+  & .quantity {
+    grid-area: quantity;
+  }
+
+  & .item-name {
+    font-weight: bold;
+  }
+
+  & .item-cost {
+    font-weight: bold;
+  }
+}
+
+.item:not(:last-child) {
+  border-bottom: 2px solid #ddb892;
+}
+
+.add-ons-list {
+  list-style: none;
+  color: #b08968;
+  font-weight: lighter;
+  font-size: 14px;
 }
