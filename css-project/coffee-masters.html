@@ -58,12 +58,53 @@
         </div>
         <div class="box name-box">
           <h2>NAME</h2>
+          <div class="name-group">
+            <label for="name-for-order" class="input-label"
+              >Name for order</label
+            >
+            <input
+              id="name-for-order"
+              class="name-input"
+              placeholder="Jane Doe"
+            />
+          </div>
         </div>
-        <div class="box payment-box"><h2>PAYMENT</h2></div>
+        <div class="box payment-box">
+          <h2>PAYMENT</h2>
+          <div class="name-group">
+            <label for="credit-card-number" class="input-label"
+              >Card number</label
+            >
+            <input
+              id="credit-card-number"
+              class="name-input"
+              placeholder="0000 0000 0000 0000"
+            />
+          </div>
+          <div class="name-group" style="width: 50%">
+            <label for="ccv-number" class="input-label">CCV number</label>
+            <input id="ccv-number" class="name-input" placeholder="123" />
+          </div>
+          <div class="name-group" style="width: 50%">
+            <label for="expiration-date" class="input-label"
+              >Expiration Date</label
+            >
+            <input
+              id="expiration-date"
+              class="name-input"
+              placeholder="00/00"
+            />
+          </div>
+        </div>
       </section>
       <section>
         <div class="wrapper total-section">
-          Total stuff here
+          Table starts here
+          <table>
+            <tr>
+              <td>table data here</td>
+            </tr>
+          </table>
           <a href="#">
             <button class="place-order-btn" type="button">Place Order</button>
           </a>
