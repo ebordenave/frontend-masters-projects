@@ -4,6 +4,9 @@
   margin: 0;
 }
 
+table {
+  border: black 1px solid;
+}
 nav {
   background-color: #43281c;
   color: #fbf2c0;
@@ -32,7 +35,6 @@ body {
   background-color: #efefef;
   padding: 30px;
   column-gap: 30px;
-  row-gap: 10px;
   text-align: center;
 }
 
@@ -43,6 +45,7 @@ body {
 
 .name-box {
   grid-column: 3 / 5;
+  margin-bottom: 30px;
 }
 
 .payment-box {
@@ -78,6 +81,7 @@ body {
     color: #885a2d;
     font-weight: lighter;
     font-size: 16px;
+    margin-bottom: 14px;
   }
 }
 
@@ -87,7 +91,6 @@ body {
 }
 
 .item {
-  /*border-bottom: 2px solid #ddb892;*/
   display: grid;
   padding: 10px 0;
   grid-template-columns: 1fr 8fr 1fr;
@@ -118,4 +121,39 @@ body {
   color: #b08968;
   font-weight: lighter;
   font-size: 14px;
+}
+
+.name-group {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  & .name-input {
+    border: 2px #885a2d solid;
+    padding: 8px;
+    border-radius: 100px;
+    background-color: #eee1d5;
+    width: inherit;
+    margin: 0 0 10px 0;
+  }
+
+  & .input-label {
+    background-color: #eee1d5;
+    color: #885a2d;
+    font-size: 11px;
+    position: absolute;
+    left: 250px;
+    top: -7px;
+    padding: 0 2px;
+  }
+
+  & .input-label {
+    background-color: #eee1d5;
+    color: #885a2d;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+  }
 }
