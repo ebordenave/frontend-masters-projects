@@ -81,29 +81,42 @@
               placeholder="0000 0000 0000 0000"
             />
           </div>
-          <div class="name-group" style="width: 50%">
-            <label for="ccv-number" class="input-label">CCV number</label>
-            <input id="ccv-number" class="name-input" placeholder="123" />
-          </div>
-          <div class="name-group" style="width: 50%">
-            <label for="expiration-date" class="input-label"
-              >Expiration Date</label
-            >
-            <input
-              id="expiration-date"
-              class="name-input"
-              placeholder="00/00"
-            />
+          <div class="cc-data">
+            <div class="ccv">
+              <label for="ccv-number" class="input-label">CCV number</label>
+              <input id="ccv-number" class="name-input" placeholder="123" />
+            </div>
+
+            <div class="expiration">
+              <label for="expiration-date" class="input-label"
+                >Expiration Date</label
+              >
+              <input
+                id="expiration-date"
+                class="name-input"
+                placeholder="00/00"
+              />
+            </div>
           </div>
         </div>
       </section>
       <section>
         <div class="wrapper total-section">
-          Table starts here
           <table>
-            <tr>
-              <td>table data here</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Subtotal:</td>
+                <td>$19.27</td>
+              </tr>
+              <tr>
+                <td>Tax:</td>
+                <td>$0.96</td>
+              </tr>
+              <tr style="font-weight: bolder">
+                <td>Total:</td>
+                <td>$20.23</td>
+              </tr>
+            </tbody>
           </table>
           <a href="#">
             <button class="place-order-btn" type="button">Place Order</button>
