@@ -5,7 +5,24 @@
 }
 
 table {
-  border: black 1px solid;
+  margin-bottom: 30px;
+  /*max-width: 50%;*/
+  min-width: 25%;
+  justify-self: center;
+}
+
+td:nth-child(2) {
+  display: table-cell;
+  margin: auto;
+  padding: 10px;
+  text-align: right;
+}
+
+td:nth-child(1) {
+  display: table-cell;
+  margin: auto;
+  padding: 10px;
+  text-align: left;
 }
 nav {
   background-color: #43281c;
@@ -55,6 +72,7 @@ body {
 .total-section {
   grid-column: 1 / 5;
   background-color: #efefef;
+  font-family: "Open Sans", serif;
 }
 
 .place-order-btn {
@@ -103,11 +121,8 @@ body {
     grid-area: quantity;
   }
 
-  & .item-name {
-    font-weight: bold;
-  }
-
-  & .item-cost {
+  & .item-name,
+  .item-cost {
     font-weight: bold;
   }
 }
@@ -127,33 +142,37 @@ body {
   position: relative;
   display: inline-block;
   width: 100%;
+}
 
-  & .name-input {
-    border: 2px #885a2d solid;
-    padding: 8px;
-    border-radius: 100px;
-    background-color: #eee1d5;
-    width: inherit;
-    margin: 0 0 10px 0;
-  }
+.name-input {
+  border: 2px #885a2d solid;
+  padding: 8px;
+  border-radius: 100px;
+  background-color: #eee1d5;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
 
-  & .input-label {
-    background-color: #eee1d5;
-    color: #885a2d;
-    font-size: 11px;
-    position: absolute;
-    left: 250px;
-    top: -7px;
-    padding: 0 2px;
-  }
+.input-label {
+  background-color: #eee1d5;
+  color: #885a2d;
+  font-size: 11px;
+  position: absolute;
+  left: 25px;
+  top: -7px;
+  padding: 0 2px;
+}
 
-  & .input-label {
-    background-color: #eee1d5;
-    color: #885a2d;
-    font-size: 11px;
-    position: absolute;
-    left: 25px;
-    top: -7px;
-    padding: 0 2px;
-  }
+.cc-data {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  justify-content: space-between;
+}
+
+.expiration .input-label,
+.ccv .input-label {
+  position: relative;
+  left: -75px;
+  top: 10px;
 }
