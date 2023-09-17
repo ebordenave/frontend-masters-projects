@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="coffee-masters-styles.css" />
+    <title>Coffee Masters</title>
+  </head>
+  <body>
+    <div>
+      <nav class="my-page-header">
+        <div>
+          <img src="bubble-tea.png" alt="coffee masters logo" />
+        </div>
+        <div>
+          <h1>Boba Masters</h1>
+        </div>
+      </nav>
+      <section class="wrapper">
+        <div class="box item-box">
+          <h2>ITEMS</h2>
+          <ul class="items">
+            <li class="item">
+              <div class="quantity">1x</div>
+              <div class="item-name">Matcha Milk Tea</div>
+              <div class="item-cost">$8.75</div>
+              <ul class="add-ons-list">
+                <li>Cheese Foam</li>
+                <li>Brown Sugar Pearls</li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="quantity">1x</div>
+              <div class="item-name">Cappuccino</div>
+              <div class="item-cost">$6.00</div>
+              <ul class="add-ons-list">
+                <li>Almond Milk</li>
+                <li>Double Espresso Shot</li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="quantity">1x</div>
+              <div class="item-name">Croissant</div>
+              <div class="item-cost">$6.00</div>
+              <ul class="add-ons-list">
+                <li>Butter</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="box name-box">
+          <h2>NAME</h2>
+          <div class="name-group">
+            <label for="name-for-order" class="input-label"
+              >Name for order</label
+            >
+            <input
+              id="name-for-order"
+              class="name-input"
+              placeholder="Jane Doe"
+            />
+          </div>
+        </div>
+        <div class="box payment-box">
+          <h2>PAYMENT</h2>
+          <div class="name-group">
+            <label for="credit-card-number" class="input-label"
+              >Card number</label
+            >
+            <input
+              id="credit-card-number"
+              class="name-input"
+              placeholder="0000 0000 0000 0000"
+            />
+          </div>
+          <div class="cc-data">
+            <div class="ccv">
+              <label for="ccv-number" class="input-label">CCV number</label>
+              <input id="ccv-number" class="name-input" placeholder="123" />
+            </div>
+
+            <div class="expiration">
+              <label for="expiration-date" class="input-label"
+                >Expiration Date</label
+              >
+              <input
+                id="expiration-date"
+                class="name-input"
+                placeholder="00/00"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrapper total-section">
+          <table>
+            <tbody>
+              <tr>
+                <td>Subtotal:</td>
+                <td>$19.27</td>
+              </tr>
+              <tr>
+                <td>Tax:</td>
+                <td>$0.96</td>
+              </tr>
+              <tr style="font-weight: bolder">
+                <td>Total:</td>
+                <td>$20.23</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="#">
+            <button class="place-order-btn" type="button">Place Order</button>
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
