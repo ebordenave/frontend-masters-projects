@@ -19,18 +19,25 @@ const handleOperator = (operator) => {
 }
 
 const handleMath = (array) => {
+  //take each item in the resulting array and that will define the expression
   const expression = array.join(' ')
-
+  //create an anonymous function that will evaluate the array properly using BODMAS
   const evaluateArray = new Function(`return ${expression}`);
+  // assign this call to the result variable
   const result = evaluateArray();
   console.log (result)
 }
 
-const pushItemsIntoThisArray = (array) => {
+const calculatorFunction = (array) => {
   handleMath(array)
 }
 
 
 
-pushItemsIntoThisArray([10,"+", 3,])
+calculatorFunction([10,"+", 3,])
 
+let sampleUserInput;
+
+while (sampleUserInput !== '=') {
+  sampleUserInput = window.prompt("Enter Number or Operator");
+}
