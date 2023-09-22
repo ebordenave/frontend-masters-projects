@@ -26,30 +26,44 @@ button {
 }
 
 .calculator-grid-layout-controller {
-    display: grid;
     background-color: black;
-    padding: 25px;
     border-radius: 25px;
+    padding: 25px 0 15px 0;
+
+}
+
+
+.button-wrapper {
+    display: grid;
     justify-items: center;
     width: 304px;
 }
 
-
+.display-wrapper {
+    justify-content: right;
+    padding-right: 30px;
+}
 .display {
-    text-wrap: normal;
-    overflow: hidden;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     color: white;
-    font-size: 40px;
+    font-size: xxx-large;
     text-align: right;
-    padding-top: 100px;
+    overflow: hidden;
     
+    scroll-behavior: smooth;
+    height: 100px;
+    max-width: 254px;
+    overflow-wrap: break-word;
+    grid-column: 1 / 4;
+    grid-row: 1;
+
 }
 
 
 .main-header {
     grid-column: 1 / 3;
+    grid-row: 2;
     min-width: 194px;
 
     & button.round {
