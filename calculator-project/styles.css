@@ -47,10 +47,13 @@ button {
     color: white;
     font-size: xxx-large;
     text-align: right;
+
     overflow: hidden;
     scroll-behavior: smooth;
     overflow-wrap: break-word;
     padding-top: 100px;
+    max-width: 258px;
+
 }
 
 .main-header {
