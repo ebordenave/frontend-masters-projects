@@ -3,6 +3,7 @@
     font-size: x-large;
     color: white;
     font-family: 'Inter', sans-serif;
+
 }
 
 div {
@@ -30,6 +31,7 @@ button {
     background-color: black;
     border-radius: 25px;
     padding: 25px 15px 25px 15px;
+    background-color: black;
 
 
 }

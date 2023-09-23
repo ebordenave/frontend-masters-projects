@@ -1,45 +1,57 @@
 let buffer = "0"
 const display = document.querySelector('.display')
-const userInputArray = []
+let userInputArray = []
 // validate the user inputted number value, this will take either a number or a math symbol
 const userInputValidator = (value) => {
   return isNaN(value) ? handleOperator(value) : handleNumber(value)
-  // return isNaN(value) ? console.log("symbol") : console.log("number")
 }
 
 const handleNumber = (number) => {
   buffer === "0" ? buffer = number : buffer += number
-  console.log(buffer, userInputArray)
 }
 
 const handleOperator = (operator) => {
-  buffer === "0" ? buffer = operator : buffer += operator
+
   userInputArray.push(buffer)
-  console.log(buffer)
+  buffer = "0"
+  switch (operator) {
+    case 'C':
+      buffer = "0"
+      flushArray(userInputArray)
+      rerender()
+      break
+    case '=':
+      handleMath(userInputArray)
+      flushArray(userInputArray)
+      rerender()
+      break
+    case '÷':
+      operator = "/"
+      userInputArray.push(operator)
+      break
+    case 'x':
+      operator = "*"
+      userInputArray.push(operator)
+      break
+    case '-':
+    case '+':
+    case '%':
+      userInputArray.push(operator)
+      break
+
+  }
 }
 
-// const handleMath = (array) => {
-//   //take each item in the resulting array and that will define the expression
-//   const expression = array.join(' ')
-//   //create an anonymous function that will evaluate the array properly using BODMAS
-//   const evaluateArray = new Function(`return ${expression}`);
-//   // assign this call to the result variable
-//   const result = evaluateArray();
-//   console.log(result)
-// }
+const flushArray = (array) => {
+  array.length = 0
+}
 
-// const calculatorFunction = (array) => {
-//   handleMath(array)
-// }
-//
-//
-// calculatorFunction([10, "+", 4,])
-
-// let sampleUserInput;
-//
-// while (sampleUserInput !== '=') {
-//   sampleUserInput = window.prompt("Enter Number or Operator");
-// }
+const handleMath = (array) => {
+  const expression = array.join(' ')
+  const evaluateArray = new Function(`return ${expression}`);
+  buffer = evaluateArray()
+  console.log(userInputArray)
+}
 
 function buttonClick(value) {
   userInputValidator(value)
@@ -50,6 +62,7 @@ function init() {
   document
     .querySelector(".button-wrapper")
     .addEventListener("click", function (event) {
+      event.stopPropagation();
       buttonClick(event.target.innerText);
     })
 }
@@ -61,4 +74,4 @@ const rerender = () => {
 init()
 
 // TODO: implement character limit in input and possibly font-size scaling
-// TODO: AC button or C button. If Char exists, button symbol changes to C
+// TODO: AC button or C button. If Char is != 0, button symbol changes to C
