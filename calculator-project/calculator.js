@@ -62,8 +62,9 @@ function init() {
   document
     .querySelector(".button-wrapper")
     .addEventListener("click", function (event) {
-      event.stopPropagation();
-      buttonClick(event.target.innerText);
+      if (event.target.tagName === "BUTTON") {
+        buttonClick(event.target.innerText);
+      }
     })
 }
 
@@ -75,3 +76,4 @@ init()
 
 // TODO: implement character limit in input and possibly font-size scaling
 // TODO: AC button or C button. If Char is != 0, button symbol changes to C
+// TODO: if event.target is a button, do button action, else do nothing
