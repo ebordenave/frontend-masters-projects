@@ -29,7 +29,7 @@ const handleOperator = (operator) => {
       operator = "/"
       userInputArray.push(operator)
       break
-    case 'x':
+    case 'X':
       operator = "*"
       userInputArray.push(operator)
       break
@@ -76,4 +76,3 @@ init()
 
 // TODO: implement character limit in input and possibly font-size scaling
 // TODO: AC button or C button. If Char is != 0, button symbol changes to C
-// TODO: if event.target is a button, do button action, else do nothing

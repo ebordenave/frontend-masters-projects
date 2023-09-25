@@ -20,6 +20,7 @@ button {
     margin: 5px;
     transition: background-color 1s;
     background-color: #505050;
+    text-align: center;
 
     & button:active {
         transition: 1ms;
