@@ -20,6 +20,7 @@ button {
     margin: 5px;
     transition: background-color 1s;
     background-color: #505050;
+    text-align: center;
 
     & button:active {
         transition: 1ms;
@@ -31,9 +32,6 @@ button {
     background-color: black;
     border-radius: 25px;
     padding: 25px 15px 25px 15px;
-    background-color: black;
-
-
 }
 
 
@@ -93,6 +91,7 @@ button {
         background-color: white;
         color: #FF9500;
     }
+/*    TODO: equal button does not behave this way, look at app*/
 
 }
 

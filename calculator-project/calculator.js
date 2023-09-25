@@ -29,7 +29,7 @@ const handleOperator = (operator) => {
       operator = "/"
       userInputArray.push(operator)
       break
-    case 'x':
+    case 'X':
       operator = "*"
       userInputArray.push(operator)
       break
@@ -62,8 +62,9 @@ function init() {
   document
     .querySelector(".button-wrapper")
     .addEventListener("click", function (event) {
-      event.stopPropagation();
-      buttonClick(event.target.innerText);
+      if (event.target.tagName === "BUTTON") {
+        buttonClick(event.target.innerText);
+      }
     })
 }
 
