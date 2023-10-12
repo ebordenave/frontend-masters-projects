@@ -1,16 +1,24 @@
 
-window.addEventListener("keydown", (e) => {
-  console.log(`${e.key.toUpperCase()}`)
-//   logic for targeting innerHTML grid box here
-})
+const handleKeyboardKeydown = (e) => {
+  const keydownEventValue = e.key.toUpperCase()
 
-window.addEventListener("click", (e) => {
-  if (e.target.tagName === "BUTTON") {
+  console.log(`${keydownEventValue}`)
+
+  // if Enter was pressed AND guessed word is a valid word (define valid word)
+  // then submit guess
+  if (keydownEventValue === "ENTER") {
+    console.log("enter was pressed")
+  }
+}
+document.body.addEventListener("keydown",handleKeyboardKeydown)
+
+const onscreenKeyboard = document.getElementById("keyboardButtonSection")
+
+const handleOnscreenKeyboardClick = (e) => {
+  if (e.target.tagName === "BUTTON"){
     console.log(`${e.target.textContent}`)
   }
-})
+}
 
-
-
-
+onscreenKeyboard.addEventListener("click",handleOnscreenKeyboardClick)
 

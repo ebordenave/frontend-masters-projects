@@ -32,7 +32,7 @@
 
 .wordleBox {
     border: #dcdcdc 2px solid;
-    border-radius: 10px
+    /*border-radius: 10px*/
 }
 
 
@@ -40,6 +40,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    min-width: 518px;
 }
 
 .keyBoardRow {
