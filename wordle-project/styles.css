@@ -32,6 +32,7 @@
 
 .wordleBox {
     border: #dcdcdc 2px solid;
+    /*border-radius: 10px*/
 }
 
 
@@ -55,6 +56,40 @@
     font-family: "Franklin Gothic Book", serif;
     font-weight: bolder;
     font-size: large;
+}
+
+.testingKeyboardPresses {
+    border: 1px dashed red;
+    width: 50%;
+    height: 30%;
+}
+
+
+.fx {
+    -webkit-display: flex;
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.fx > div {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.fx > div:first-child {
+    width: 30%;
+}
+
+.flex {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+#test-target {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 
