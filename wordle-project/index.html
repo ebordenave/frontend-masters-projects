@@ -45,7 +45,7 @@
                 <div class="wordleBox"></div>
             </div>
         </div>
-        <section class="keyboardButtonSection">
+        <section class="keyboardButtonSection" id="keyboardButtonSection">
             <section>
                 <button class="singleButton">Q</button>
                 <button class="singleButton">W</button>
@@ -81,8 +81,18 @@
                 <button class="singleButton" style="width: 70px">SYM</button>
             </section>
         </section>
-        <div class="testingKeyboardPresses">testing</div>
+        <div class="testingKeyboardPresses">
+            <div>
+                <textarea rows="5" name="test-target" id="test-target"></textarea>
+                <button type="button" name="btn-reset" id="btn-reset">Reset</button>
+            </div>
+            <div class="flex">
+                <pre id="console-log"></pre>
+            </div>
+        </div>
+        <script src="placeholderRandomName.js"></script>
     </div>
+
 
 </body>
 </html>
