@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Franklin Gothic Medium", serif;
 }
 
 .wordleGridBoard {
@@ -32,19 +33,19 @@
 
 .wordleBox {
     border: #dcdcdc 2px solid;
-    /*border-radius: 10px*/
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bolder;
 
+}
 
 .keyboardButtonSection {
     display: flex;
     align-items: center;
     flex-direction: column;
     min-width: 518px;
-}
-
-.keyBoardRow {
-
 }
 
 .singleButton {
@@ -59,39 +60,6 @@
     font-size: large;
 }
 
-.testingKeyboardPresses {
-    border: 1px dashed red;
-    width: 50%;
-    height: 30%;
-}
-
-
-.fx {
-    -webkit-display: flex;
-    display: flex;
-    margin-left: -20px;
-    margin-right: -20px;
-}
-
-.fx > div {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.fx > div:first-child {
-    width: 30%;
-}
-
-.flex {
-    -webkit-flex: 1;
-    flex: 1;
-}
-
-#test-target {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
 
 
 
