@@ -1,52 +1,58 @@
-let currentId = 0
+let currentRowId = 0;
+let currentColumnId = 0;
 
 const handleKeyboardKeydown = (e) => {
-  // format to the keydown to always be Uppercase
-  const keydownEventValue = e.key.toUpperCase()
+  const keydownEventValue = e.key.toUpperCase();
 
-  // if key is 1 letter
   if (e.key.length === 1) {
+    const div = document.getElementById(
+      `row=${currentRowId}-column=${currentColumnId}`,
+    );
 
-    // declare a div and a corresponding ID to a variable
-    const div = document.getElementById(`${currentId}`)
-
-    // if div exists and the div class contains wordleBox
     if (div && div.classList.contains("wordleBox")) {
-
-      // the text content will equal the keydowneventvalue
-
-      div.textContent = keydownEventValue
-      // the text content will equal the keydowneventvalue
-      currentId += 1
+      div.textContent = keydownEventValue;
     }
-
+    currentColumnId += 1;
+  }
+  if (currentColumnId % 6 === 5) {
+    currentRowId += 1;
+    currentColumnId = 0;
   }
 
   if (keydownEventValue === "ENTER") {
-    console.log("submitting Guess")
+    console.log("submitting Guess");
   }
-}
+  console.log(currentRowId, currentColumnId);
+};
 
-document.body.addEventListener("keydown",handleKeyboardKeydown)
+document.body.addEventListener("keydown", handleKeyboardKeydown);
 
-const onscreenKeyboard = document.getElementById("keyboardButtonSection")
+const onscreenKeyboard = document.getElementById("keyboardButtonSection");
 
 const handleOnscreenKeyboardClick = (e) => {
-  if (e.target.tagName === "BUTTON"){
-    document.getElementById(`${currentId}`).innerHTML= e.target.textContent
-    currentId += 1
+  if (e.target.tagName === "BUTTON") {
+    document.getElementById(
+      `row=${currentRowId}-column=${currentColumnId}`,
+    ).innerHTML = e.target.textContent;
   }
-}
+  currentColumnId += 1;
+  if (currentColumnId % 6 === 5) {
+    currentRowId += 1;
+    currentColumnId = 0;
+  }
+  console.log(currentRowId, currentColumnId);
+};
 
-onscreenKeyboard.addEventListener("click",handleOnscreenKeyboardClick)
+onscreenKeyboard.addEventListener("click", handleOnscreenKeyboardClick);
 
-const createWordleBoxIdNumbers = () => {
-  const wordleBoxes = document.querySelectorAll(".wordleBox")
+const generateBoxIdNumbers = () => {
+  const wordleBoxes = document.querySelectorAll(".wordleBox");
 
-  wordleBoxes.forEach((box,index)=> {
-    box.id = `${index}`
-  })
-}
-createWordleBoxIdNumbers()
+  wordleBoxes.forEach((box, index) => {
+    const rowIndex = Math.floor(index / 5);
+    const columnIndex = index % 5;
+    box.id = `row=${rowIndex}-column=${columnIndex}`;
+  });
+};
 
-
+generateBoxIdNumbers();
